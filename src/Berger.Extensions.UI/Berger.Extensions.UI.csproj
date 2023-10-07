@@ -4,8 +4,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Berger.Extensions.Platform\src\Berger.Extensions.Platform\Berger.Extensions.System.csproj" />
+	  <PackageReference Include="Berger.Extensions.System" Version="1.0.0.1" />
 	</ItemGroup>
 </Project>
