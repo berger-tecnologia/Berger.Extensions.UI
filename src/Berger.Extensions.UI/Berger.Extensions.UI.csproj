@@ -4,8 +4,16 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>disable</Nullable>
 	</PropertyGroup>
-	
-	<ItemGroup>
-		<PackageReference Include="Berger.Extensions.System" Version="1.0.0.1" />
+
+	<PropertyGroup>
+		<UseProjectReference>true</UseProjectReference>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(UseProjectReference)' == 'true'">
+		<ProjectReference Include="..\..\..\Berger.Extensions.System\src\Berger.Extensions.System\Berger.Extensions.System.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(UseProjectReference)' != 'true'">
+		<PackageReference Include="Berger.Extensions.System" Version="*" />
 	</ItemGroup>
 </Project>
