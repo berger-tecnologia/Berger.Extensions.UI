@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class CardComponent : Menu
+    public class CardComponent : BaseMenu
     {
         #region Constructors
         public CardComponent()

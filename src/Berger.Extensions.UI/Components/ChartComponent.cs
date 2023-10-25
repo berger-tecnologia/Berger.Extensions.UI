@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class ChartComponent : Menu
+    public class ChartComponent : BaseMenu
     {
         #region Constructors
         public ChartComponent()
