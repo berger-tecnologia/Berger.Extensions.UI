@@ -12,6 +12,7 @@ namespace Berger.Extensions.UI
 
         #region Properties
         public string Title { get; set; } = string.Empty;
+        public string Subtitle { get; set; } = string.Empty;
         public string Color { get; set; } = string.Empty;
         #endregion
 
