@@ -2,8 +2,12 @@
 
 namespace Berger.Extensions.UI
 {
-    public class Page : IBaseEntity
+    public class Page : BaseEntityWrapper, IModule
     {
+        #region Interfaces
+        private readonly IBaseEntity BaseEntity;
+        #endregion
+
         #region Properties
         public Guid HeaderID { get; set; }
         public Guid ModuleID { get; set; }
@@ -15,26 +19,20 @@ namespace Berger.Extensions.UI
         #region Virtuals
         public Header Header { get; set; } = new Header();
         public Footer Footer { get; set; } = new Footer();
-        //public Module Module { get; set; } = new Module();
-        //public Template Template { get; set; } = new Template();
+        public IModule Module { get; set; }
+        public Template Template { get; set; }
         public List<Page> Childrens { get; set; } = new List<Page>();
         public List<Element> Menus { get; set; } = new List<Element>();
-        public Guid ID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Deleted { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime? DeletedOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime? ModifiedOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime CreatedOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
-        public void Delete()
-        {
-            //this.Delete = true;
-        }
         #endregion
 
         #region Methods
-        public static void SetModule(string module)
+        public void Delete()
         {
-            //this.Module = new Module(module);
+            BaseEntity.Delete();
+        }
+        public void SetModule(string name)
+        {
+            Module.SetModule(name);
         }
         #endregion
     }
