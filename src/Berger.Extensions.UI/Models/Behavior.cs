@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class Behavior : BaseEntityWrapper
+    public class Behavior : BaseEntity
     {
         #region Properties
         public Guid? PageID { get; set; }
@@ -18,7 +18,7 @@ namespace Berger.Extensions.UI
         #region Virtual
         public Page Page { get; set; } = new Page();
         public ITemplate Template { get; set; }
-        public IApplication Application { get; set; }
+        public ISoftware Application { get; set; }
         #endregion
 
         #region Methods

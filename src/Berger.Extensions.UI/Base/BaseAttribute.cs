@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class BaseAttribute : BaseEntityWrapper
+    public class BaseAttribute : BaseEntity
     {
         #region Properties
         public string AttributeID { get; set; } = string.Empty;

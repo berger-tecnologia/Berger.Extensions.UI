@@ -2,12 +2,8 @@
 
 namespace Berger.Extensions.UI
 {
-    public class Page : BaseEntityWrapper, IModule
+    public class Page : BaseEntity, IModule
     {
-        #region Interfaces
-        private readonly IBaseEntity BaseEntity;
-        #endregion
-
         #region Properties
         public Guid HeaderID { get; set; }
         public Guid ModuleID { get; set; }
@@ -26,10 +22,6 @@ namespace Berger.Extensions.UI
         #endregion
 
         #region Methods
-        public void Delete()
-        {
-            BaseEntity.Delete();
-        }
         public void SetModule(string name)
         {
             Module.SetModule(name);

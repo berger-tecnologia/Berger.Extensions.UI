@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class Template : BaseEntityWrapper, ITemplate
+    public class Template : BaseEntity, ITemplate
     {
         #region Properties
         public string Name { get; set; } = string.Empty;
