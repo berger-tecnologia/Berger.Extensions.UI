@@ -12,7 +12,7 @@ namespace Berger.Extensions.UI
         public string Name { get; set; } = string.Empty;
         public List<Element> Elements { get; set; } = new List<Element>();
         public List<Element> Sections { get; set; } = new List<Element>();
-        public List<IVariation> Variations { get; set; }
+        public List<Variation> Variations { get; set; } = new List<Variation>();
         #endregion
 
         #region Virtual

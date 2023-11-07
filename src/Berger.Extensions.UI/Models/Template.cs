@@ -1,4 +1,5 @@
-﻿using Berger.Extensions.Abstractions;
+﻿using Berger.Extensions.Storage;
+using Berger.Extensions.Abstractions;
 
 namespace Berger.Extensions.UI
 {
@@ -6,8 +7,8 @@ namespace Berger.Extensions.UI
     {
         #region Properties
         public string Name { get; set; } = string.Empty;
-        public List<IVariation> Variations { get; set; }
-        public List<IAsset<IFileExtension>> Assets { get; set; }
+        public List<Asset> Assets { get; set; } = new List<Asset>();
+        public List<Variation> Variations { get; set; } = new List<Variation>();
         #endregion
     }
 }
