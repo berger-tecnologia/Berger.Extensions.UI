@@ -9,7 +9,6 @@ namespace Berger.Extensions.UI
         public Guid ModuleID { get; set; }
         public Guid FooterID { get; set; }
         public string Name { get; set; } = string.Empty;
-        public List<Behavior> Behaviors { get; set; } = new List<Behavior>();
         #endregion
 
         #region Virtuals
