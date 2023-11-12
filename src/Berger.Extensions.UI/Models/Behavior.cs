@@ -6,8 +6,8 @@ namespace Berger.Extensions.UI
     {
         #region Properties
         public Guid SoftwareID { get; set; }
-        public Guid? TemplateID { get; set; }
-        public Guid? PageID { get; set; }
+        public Guid? TemplateId { get; set; }
+        public Guid? PageId { get; set; }
         public BehaviorType BehaviorType { get; set; }
         public string Name { get; set; } = string.Empty;
         public List<Element> Elements { get; set; } = new List<Element>();
@@ -25,15 +25,15 @@ namespace Berger.Extensions.UI
         #region Methods
         public void SetTemplateId(Guid id)
         {
-            this.TemplateID = id;
+            this.TemplateId = id;
         }
-        public void SetSoftwareID(Guid id)
+        public void SetSoftwareId(Guid id)
         {
             this.SoftwareID = id;
         }
         public void SetPageId(Guid id)
         {
-            this.PageID = id;
+            this.PageId = id;
         }
         #endregion
     }

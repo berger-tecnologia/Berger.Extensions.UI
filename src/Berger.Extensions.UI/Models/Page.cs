@@ -6,12 +6,12 @@ namespace Berger.Extensions.UI
     {
         #region Properties
         public Guid HeaderID { get; set; }
-        public Guid ModuleID { get; set; }
+        public Guid ModuleId { get; set; }
         public Guid FooterID { get; set; }
         public string Name { get; set; } = string.Empty;
         #endregion
 
-        #region Virtuals
+        #region Virtual
         public Header Header { get; set; } = new Header();
         public Footer Footer { get; set; } = new Footer();
         public IModule Module { get; set; }

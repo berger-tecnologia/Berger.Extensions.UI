@@ -3,8 +3,8 @@
     public class Element : BaseElement
     {
         #region Properties
-        public Guid? ParentID { get; set; }
-        public Guid? ColorID { get; set; }
+        public Guid? ParentId { get; set; }
+        public Guid? ColorId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Slug { get; set; } = string.Empty;
         public string Title { get; set; } = string.Empty;
