@@ -1,8 +1,6 @@
-﻿using Berger.Extensions.System;
-
-namespace Berger.Extensions.UI
+﻿namespace Berger.Extensions.UI
 {
-    public class CardComponent : BaseMenu
+    public class CardComponent : BaseElement
     {
         #region Constructors
         public CardComponent()
@@ -16,6 +14,7 @@ namespace Berger.Extensions.UI
         public string Icon { get; set; } = string.Empty;
         public string Color { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public List<Element> Menus { get; set; } = new List<Element>();
         #endregion
 
         #region Methods
