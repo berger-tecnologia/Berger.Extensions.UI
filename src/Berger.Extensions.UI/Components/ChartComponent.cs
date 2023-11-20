@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class ChartComponent<T> : IBaseElement<T> where T : Enum
+    public class ChartComponent<T> : IBaseElement<T>, IBaseAttribute where T : Enum
     {
         #region Constructors
         public ChartComponent()
@@ -21,6 +21,7 @@ namespace Berger.Extensions.UI
         public string Class { get; set; } = string.Empty;
         public string Style { get; set; } = string.Empty;
         public string Target { get; set; } = string.Empty;
+        public string AttributeId { get; set; } = string.Empty;
         #endregion
 
         #region Methods
@@ -37,11 +38,15 @@ namespace Berger.Extensions.UI
         }
         public void SetHref(string link)
         {
-            throw new NotImplementedException();
+            this.Href = link;
         }
         public void SetType(T type)
         {
-            throw new NotImplementedException();
+            this.SetType(type);
+        }
+        public void SetAttributeId(string attributeId)
+        {
+            this.AttributeId = attributeId;
         }
         #endregion
     }
