@@ -2,7 +2,7 @@
 
 namespace Berger.Extensions.UI
 {
-    public class ChartComponent<T> : IBaseElement<T>, IBaseAttribute where T : Enum
+    public class ChartComponent<T> : BaseEntity, IBaseElement<T>, IBaseAttribute where T : Enum
     {
         #region Constructors
         public ChartComponent()
@@ -16,12 +16,12 @@ namespace Berger.Extensions.UI
         public string Title { get; set; } = string.Empty;
         public string Subtitle { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
-        public List<IElement> Menus { get; set; }
         public string Href { get; set; } = string.Empty;
         public string Class { get; set; } = string.Empty;
         public string Style { get; set; } = string.Empty;
         public string Target { get; set; } = string.Empty;
         public string AttributeId { get; set; } = string.Empty;
+        public List<IElement> Menus { get; set; } = new List<IElement>();
         #endregion
 
         #region Methods
